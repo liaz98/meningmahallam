@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_al(&l5^y8z-l6xg993c+9ahl9h8hkbzjn5_68hu-po^=6ef4o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -128,9 +130,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'statics'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'statics'
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / 'statics'
+]
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/images/'
 
@@ -138,3 +140,4 @@ MEDIA_URL = '/images/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CORS_ALLOW_ALL_ORIGINS = True
