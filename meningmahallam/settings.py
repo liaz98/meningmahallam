@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'meningmahallam.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'meningmahallam',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'NAME': 'db3fe9bpl4cqua',
+        'USER': 'riamplzkqvwnsw',
+        'PASSWORD': '7f4384941022b65ee52f29931135b97b006149deab46f4cdbbc740cdeeacc323',
+        'HOST': 'ec2-54-89-105-122.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
