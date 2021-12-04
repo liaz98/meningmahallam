@@ -52,6 +52,7 @@ class Vacancy(models.Model):
     def __str__(self):
         return self.name
 
+
 class Street(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     address = models.CharField(max_length=100, blank=True, null=True)
