@@ -1,0 +1,1 @@
+web: gunicorn meningmahallam.wsgi --log-file -
